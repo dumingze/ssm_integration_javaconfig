@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace就是该映射文件的唯一id，映射文件的namespace(命名空间)不能重复-->
+<mapper namespace="com.dmz.mapper.UserMapper">
+
+    <select id="selectUserById" resultType="com.dmz.bean.User">
+        select id,username,password,age,gender from j23_user_t where id = #{id}
+    </select>
+</mapper>
